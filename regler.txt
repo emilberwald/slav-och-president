@@ -17,11 +17,12 @@ K
 Orgie
 
 SPECIALKOMBINATIONER:
-Färgstege
+Färgstege Räknas som ett kort, med det värde högsta valören har. För att räknas som par/triss/fyrtal 
+          måste flera kopior av högsta valören finnas.
 
 Orgies:
-Kn+Kn+K		Förstörs av en Dam av samma färg som Kungen
-Kn+Kn+Dam	Förstörs av en K av samma färg som Damen
+Kn+Kn+K		Blockas av en Dam av samma färg som Kungen
+Kn+Kn+Dam	Blockas av en K av samma färg som Damen
 
 STATUSVARIANTER:
 hoppslav
