@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="kort.presentation.views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:kort.presentation.viewmodels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
+    xmlns:Interactions="using:Microsoft.Xaml.Interactions.Core"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="159.333" Width="242.667"
+    >
+    <Page.DataContext>
+        <vm:SettingsPageViewModel/>
+    </Page.DataContext>
+    <Interactivity:Interaction.Behaviors>
+        <Interactions:EventTriggerBehavior EventName="Loaded">
+            <Interactions:InvokeCommandAction Command="{Binding ViewLoadedCommand}"/>
+        </Interactions:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1">
+            <Grid Grid.Row="0" Grid.Column="0">
+                <StackPanel>
+                    <AppBarButton x:Name="settingsButton" Icon="Setting" Label="Settings" Command="{Binding ConfigureCommand}" />
+                    <AppBarButton x:Name="cardButton" Icon="Add" Label="Add Deck" Command="{Binding AddDeckCommand}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <TextBox FontSize="30" x:Name="textBox" Text="{Binding CurrentHand}" TextWrapping="NoWrap"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+﻿value:
+	- immutable attributes
+	- structural equality
+	- lifespan dependent on owning entity
+entity:
+	- mutable attributes (values)
+	- identifier equality
+	- lifespan independent
+model : entity
+	- behavior
+	- entity-entity-relationships
+
+presentation layer
+application layer
+domain layer
+	api
+	extensions
+	mappings
+	values
+data layer
+	context
+	entities
+	values
